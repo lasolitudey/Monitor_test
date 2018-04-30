@@ -1,0 +1,44 @@
+﻿<Page x:Class="Monitor_test.info"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Monitor_test"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="475"
+      Title="info">
+
+    <Grid Background="#FF202931" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="237.5"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="72.5"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="237.5"/>
+            <ColumnDefinition Width="237.5"/>
+        </Grid.ColumnDefinitions>
+        <ProgressBar x:Name="Tem_bar" Style="{StaticResource LoopProcessBar}" Value="{Binding tem,Mode=OneWay}" Width="200" Height="200"  BorderThickness="30" BorderBrush="#FFFB5240" FontSize="30" />
+        <Label x:Name="Tem_Now" Width="48" Height="48" Content="10" FontSize="30" Foreground="#FFFB5240"/>
+        <ProgressBar x:Name="Hum_bar" Style="{StaticResource LoopProcessBar}" Value="{Binding hum,Mode=OneWay}" Grid.Column="1" Width="200" Height="200"  BorderThickness="30" BorderBrush="#FF3333FF" FontSize="30" Foreground="#FF3333FF"/>
+        <Label x:Name="Hum_Now" Width="48" Height="48" Content="20" FontSize="30" Grid.Column="1" Background="{x:Null}" Foreground="#FF1F57CD"/>
+        <Label Grid.Row="1" Grid.Column="0" Height="40" Width="100" VerticalAlignment="Center" Content="实时温度" FontSize="20" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label Grid.Row="1" Grid.Column="1" Height="40" Width="100" VerticalAlignment="Center" Content="实时湿度" FontSize="20" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label Grid.Row="3" Grid.Column="0" Height="50" Width="100" Margin="30,0,107.5,0" Content="最高温度" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label x:Name="Tem_Max" Grid.Row="3" Grid.Column="0" Height="50" Width="80" Margin="137,0,20.5,0" Content="" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label Grid.Row="3" Grid.Column="1" Height="50" Width="100" Margin="30,0,107.5,0" Content="最高湿度" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label x:Name="Hum_Max" Grid.Row="3" Grid.Column="1" Height="50" Width="80" Margin="137,0,20.5,0" Content="" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label Grid.Row="4" Grid.Column="0" Height="50" Width="100" Margin="30,0,107.5,0" Content="最低温度" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label x:Name="Tem_Min" Grid.Row="4" Grid.Column="0" Height="50" Width="80" Margin="137,0,20.5,0" Content="" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label Grid.Row="4" Grid.Column="1" Height="50" Width="100" Margin="30,0,107.5,0" Content="最低湿度" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label x:Name="Hum_Min" Grid.Row="4" Grid.Column="1" Height="50" Width="80" Margin="137,0,20.5,0" Content="" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label Grid.Row="5" Grid.Column="0" Height="50" Width="100" Margin="30,0,107.5,0" Content="平均温度" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label x:Name="Tem_Avg" Grid.Row="5" Grid.Column="0" Height="50" Width="80" Margin="137,0,20.5,0" Content="" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label Grid.Row="5" Grid.Column="1" Height="50" Width="100" Margin="30,0,107.5,0" Content="平均湿度" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+        <Label x:Name="Hum_Avg" Grid.Row="5" Grid.Column="1" Height="50" Width="80" Margin="137,0,20.5,0" Content="" FontSize="16" Foreground="#FFA2A2A2" FontFamily="Arial Narrow" />
+    </Grid>
+</Page>

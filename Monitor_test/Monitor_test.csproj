@@ -34,8 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,6 +62,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Page_car.xaml.cs">
+      <DependentUpon>Page_car.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="info_history.xaml.cs">
+      <DependentUpon>info_history.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Setup.xaml.cs">
+      <DependentUpon>Page_Setup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="switch_control.xaml.cs">
+      <DependentUpon>switch_control.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Page_car.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="info_history.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,10 +94,21 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="info.xaml.cs">
+      <DependentUpon>info.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Page_Setup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="switch_control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -82,7 +125,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -92,6 +135,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\if_left_1167973.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\if_right_1167974.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\switch_128px_1201391_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\switch_128px_1201392_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\search_128px_1179290_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Liste_list_item_128px_1075681_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Parametres_128px_1075690_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Valider_yes_128px_1075671_easyicon.net.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

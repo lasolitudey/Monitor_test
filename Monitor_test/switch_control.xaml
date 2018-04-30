@@ -1,0 +1,25 @@
+﻿<Page x:Class="Monitor_test.switch_control"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Monitor_test"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="475"
+      Title="switch_control">
+
+    <Grid Background="#FF202931">
+        <Label  Height="40" Width="70" Margin="0,120,0,390" Content="AUTO" FontSize="22" FontFamily="Yu Gothic UI Semibold" Foreground="#FF787878"/>
+        <Button x:Name="Switch_1" Height="60" Width="100" Margin="0,170,0,320" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Switch_1_Click" Style="{DynamicResource Button_Switch}">
+            <Button.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Resources/switch_128px_1201392_easyicon.net.ico"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Label_Manual"  Height="40" Width="105" Margin="0,270,0,240" Content="MANUAL" FontSize="22" FontFamily="Yu Gothic UI Semibold" Foreground="#FF787878" Visibility="Hidden"/>
+        <Button x:Name="Switch_2" Height="60" Width="100" Margin="0,320,0,160" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Switch_2_Click" Style="{DynamicResource Button_Switch}" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Resources/switch_128px_1201392_easyicon.net.ico"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>

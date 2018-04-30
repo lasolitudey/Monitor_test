@@ -5,8 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Monitor_test"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="650" Width="525" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+    <Grid >
+        <Border BorderThickness="1"  CornerRadius="10,10,10,10" Background="#FF202931" />
+        <Grid x:Name="All">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="550"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="Top_Grid"  Grid.Row="0" >
+                <Border BorderThickness="1" CornerRadius="20,20,0,0" MouseLeftButtonDown="Top_MouseLeftButtonDown" Background="#FF202931"/>
+                <Button x:Name="Button_exit"  Width="25" Height="25" Style="{DynamicResource Button_ellipse}" Background="#FFFB5240"  Click="Button_exit_Click" BorderBrush="#FF202931" Margin="490,12.5,10,12.5" />
+                <Button x:Name="Button_min" Width="25" Height="25" Style="{DynamicResource Button_ellipse2}" Background="#FF424C55" BorderBrush="#FF202931"  Click="Button_min_Click" Margin="460,12.5,40,12.5" />
+            </Grid>
+            <Grid Grid.Row="1">
+                <!--主界面-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="475"/>
+                    <ColumnDefinition Width="25"/>
+                </Grid.ColumnDefinitions>
+                <Button  x:Name="Last" Height="50" Width="25" Grid.Column="0"  BorderBrush="{x:Null}" Click="Last_Click" Style="{DynamicResource Button_Setup}" Margin="0,250">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/if_left_1167973.ico"/>
+                    </Button.Background>
+                </Button>
+                <Button  x:Name="Last_1" Height="50" Width="25" Grid.Column="0"  BorderBrush="{x:Null}" Click="Last_1_Click" Style="{DynamicResource Button_Setup}" Margin="0,250" Visibility="Hidden">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/if_left_1167973.ico"/>
+                    </Button.Background>
+                </Button>
+                <ContentControl x:Name="Main_Content" Grid.Column="1"/>
+                <Button  x:Name="Next" Height="50" Width="25" Grid.Column="2"  BorderBrush="{x:Null}" Click="Next_Click" Style="{DynamicResource Button_Setup}" Margin="0,250">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/if_right_1167974.ico"/>
+                    </Button.Background>
+                </Button>
+                <Button  x:Name="Next_1" Height="50" Width="25" Grid.Column="2"  BorderBrush="{x:Null}" Click="Next_1_Click" Style="{DynamicResource Button_Setup}" Margin="0,250" Visibility="Hidden">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/if_right_1167974.ico"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+            <DockPanel Grid.Row="2">
+                <!--设置 切换按钮 选择按钮-->
+                <Button x:Name="List" HorizontalAlignment="Right" Height="30" Width="30"  BorderBrush="#FF202931" Style="{DynamicResource Button_Setup}" Margin="15,0,0,0" Click="List_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/Liste_list_item_128px_1075681_easyicon.net.ico"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="List_1" Height="30" Width="30"  BorderBrush="#FF202931" Style="{DynamicResource Button_Setup}" Margin="15,0,0,0" Click="List_1_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/Valider_yes_128px_1075671_easyicon.net.ico"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Setup" HorizontalAlignment="Right" Height="40" Width="40" Margin="0,0,15,0" BorderBrush="#FF202931" Style="{DynamicResource Button_Setup}" Click="Setup_Click" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/Parametres_128px_1075690_easyicon.net.ico"/>
+                    </Button.Background>
+                </Button>
+
+            </DockPanel>
+        </Grid>
+
     </Grid>
 </Window>

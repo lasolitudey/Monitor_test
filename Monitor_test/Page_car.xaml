@@ -1,0 +1,28 @@
+﻿<Page x:Class="Monitor_test.Car"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Monitor_test"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="475"
+      Title="Car">
+
+    <Grid Background="#FF202931">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="Car1" Height="90" Width="250" Grid.Row="1"  Background="#FFFB5240" Content="Car1" Foreground="White" FontSize="36" FontFamily="Showcard Gothic" Click="Car1_Click"/>
+            <Button x:Name="Car2" Height="90" Width="250" Grid.Row="3"  Background="#FFFB5240" Content="Car2" Foreground="White" FontSize="36" FontFamily="Showcard Gothic" Click="Car2_Click"/>
+            <Button x:Name="Car3" Height="90" Width="250" Grid.Row="5"  Background="#FFFB5240" Content="Car3" Foreground="White" FontSize="36" FontFamily="Showcard Gothic" Click="Car3_Click"/>
+
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,24 @@
+﻿<Page x:Class="Monitor_test.info_history"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Monitor_test"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="475"
+      Title="info_history">
+
+    <Grid Background="#FF202931">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="510"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Height="40" Width="120" HorizontalAlignment="Left" Content="History Data" FontSize="18" FontFamily="Segoe UI" Foreground="#FF9E9999"/>
+        <Button x:Name="History_Search" Height="30" Width="30" HorizontalAlignment="Right" BorderBrush="{x:Null}" Foreground="{x:Null}" Style="{DynamicResource Button_Setup}">
+            <Button.Background>
+                <ImageBrush ImageSource="E:\文档\Monitor_test\Monitor_test\Resources\search_128px_1179290_easyicon.net.ico"/>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="History_Chart" Style="{DynamicResource DataGridStyle1}" IsReadOnly="True" Grid.Row="1" Background="#FF202931" BorderBrush="{x:Null}"/>
+    </Grid>
+</Page>
