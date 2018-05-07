@@ -16,6 +16,7 @@ using System.Threading;
 using MySql.Data.MySqlClient;
 using System.Windows.Threading;
 using System.Configuration;
+using System.Data;
 
 namespace Monitor_test
 {
@@ -238,27 +239,29 @@ namespace Monitor_test
             }
         }
 
-        public static MySqlDataAdapter Sql_DataGrid(int Car_Num)
+        public static DataSet Sql_DataGrid(int Car_Num)
         {
             MySqlDataAdapter sda = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
             switch (Car_Num)
             {
                 case 1:
                     view(" router");
-                    return sda;
+                    return ds;
                 case 2:
                     view(" enddevice_1");
-                    return sda;
+                    return ds;
                 case 3:
                     view(" enddevice_2");
-                    return sda;
+                    return ds;
                 default:
-                    return sda;
+                    return ds;
             }
             void view(string car)
             {
                 string sql = "select id as 'id',date_format(time,'%y/%m/%d-%h:%i:%s')as'time',temperature as 'temperature',humidity as 'humidity' from" + car;
                 sda = new MySqlDataAdapter(sql, mcon);
+                sda.Fill(ds);
             }
         }
     }

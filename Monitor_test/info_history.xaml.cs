@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace Monitor_test
 {
@@ -24,9 +25,8 @@ namespace Monitor_test
         public info_history()
         {
             InitializeComponent();
-            DataSet Ds = new DataSet();
-            Sql.Sql_DataGrid(Car_Now.Car_Number).Fill(Ds);
-            History_Chart.ItemsSource = Ds.Tables[0].DefaultView;
+           
+            History_Chart.ItemsSource = Sql.Sql_DataGrid(Car_Now.Car_Number).Tables[0].DefaultView;
         }
     }
 }
